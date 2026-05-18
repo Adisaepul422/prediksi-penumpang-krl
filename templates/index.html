@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Jumlah Penumpang KRL Jabodetabek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            padding: 80px 0;
+            color: white;
+        }
+        .card-model {
+            transition: transform 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card-model:hover {
+            transform: translateY(-10px);
+        }
+        .model-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #1a237e;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                🚆 KRL Passenger Predictor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Prediksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/compare">Perbandingan Model</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Prediksi Jumlah Penumpang KRL</h1>
+            <p class="lead mt-3">Menggunakan 5 Algoritma Machine Learning untuk memprediksi jumlah penumpang KRL Jabodetabek hingga tahun 2030</p>
+            <a href="/predict" class="btn btn-light btn-lg mt-4">Mulai Prediksi →</a>
+        </div>
+    </div>
+
+    <!-- 5 Model Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5">⚙️ 5 Algoritma Machine Learning</h2>
+        <div class="row g-4">
+            <div class="col-md-4 col-lg-2">
+                <div class="card card-model h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="model-icon">📊</div>
+                        <h5>Linear Regression</h5>
+                        <small class="text-muted">Ridge Regression dengan regularisasi L2</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="card card-model h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="model-icon">🧠</div>
+                        <h5>Artificial Neural Network</h5>
+                        <small class="text-muted">MLPRegressor dengan 2 hidden layer</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="card card-model h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="model-icon">🔄</div>
+                        <h5>RNN (Gradient Boosting)</h5>
+                        <small class="text-muted">Untuk menangkap pola time series</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card card-model h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="model-icon">🔮</div>
+                        <h5>K-Means + Regresi</h5>
+                        <small class="text-muted">Clustering + Linear Regression</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card card-model h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="model-icon">⚙️</div>
+                        <h5>Backpropagation Manual</h5>
+                        <small class="text-muted">Neural Network dari scratch</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Dataset -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">📊 Dataset</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Dataset jumlah penumpang KRL Commuterline Jabodetabek periode <strong>Januari 2006 - April 2023</strong>.</p>
+                        <ul>
+                            <li>Total sampel: 208 bulan</li>
+                            <li>Setelah feature engineering: 196 sampel</li>
+                            <li>Fitur: 13 (lag features, rolling statistics, temporal)</li>
+                            <li>Sumber: Open Data Kementerian Perhubungan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">🎯 Fitur Aplikasi</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>✅ Prediksi bulan tertentu (2024-2030)</li>
+                            <li>✅ Prediksi 1 tahun ke depan (12 bulan)</li>
+                            <li>✅ Prediksi multi tahun (2-5 tahun)</li>
+                            <li>✅ Perbandingan performa 5 model</li>
+                            <li>✅ Visualisasi grafik interaktif</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 - UTS Praktikum Kecerdasan Buatan</p>
+            <p>Prediksi Jumlah Penumpang KRL Jabodetabek | Adi Saepul Ramadan | 301240056</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

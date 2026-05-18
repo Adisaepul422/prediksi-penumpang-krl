@@ -1,0 +1,62 @@
+/* Custom CSS untuk aplikasi prediksi KRL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.btn {
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0d47a1, #1a237e);
+    transform: scale(1.02);
+}
+
+table {
+    font-size: 14px;
+}
+
+.table thead th {
+    background-color: #1a237e;
+    color: white;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.alert {
+    border-radius: 12px;
+}
