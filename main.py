@@ -12,8 +12,8 @@ app = Flask(__name__)
 print("Loading models...")
 
 # Mendapatkan path absolut
-base_dir = os.path.dirname(os.path.abspath(__file__))
-models_dir = os.path.join(base_dir, '../models')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+models_dir = os.path.join(BASE_DIR, 'models')
 
 # Load semua model
 lr_model = joblib.load(os.path.join(models_dir, 'lr_model.pkl'))
